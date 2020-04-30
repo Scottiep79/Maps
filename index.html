@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <p>Please enter a name.</p>
+	  <input id="text1" type="text">
+    <input type="button" id="button1" value="Add" onclick="input();"></input>
+    <input type="button" id="button2" value="Display" onclick="display_names();"></input>
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <script>
+      var names = [];
+      var names1 = [];
+      var x = 0;
+      function input(){
+       
+        names.push(document.getElementById("text1").value);
+        alert("Element: " + names + " Added at index " + x);
+        x++;
+        document.getElementById("text1").value = "";
+       
+      }
+      function display_names(){
+        var e = "";   
+    
+        for (var y=0; y<names.length; y++){
+        e +=  names[y] + "<br/>";
+        }
+        
+
+        var names1 = "<hr/>";
+
+        names1 = names.map(name => name.charAt(0).toUpperCase() + name.substr(1).toLowerCase());
+        document.getElementById("output1").innerHTML = e;
+        document.getElementById("output2").innerHTML = names1;
+      }
+
+    </script>
+  </body>
+</html>
