@@ -29,13 +29,13 @@
         var e = "";   
     
         for (var y=0; y<names.length; y++){
-        e +=  names[y] + "<br/>";
+        e +=  names[y] +"<br/>";
         }
         
 
         var names1 = "<hr/>";
 
-        names1 = names.map(name => name.charAt(0).toUpperCase() + name.substr(1).toLowerCase());
+        names1 = names.map(name => name.charAt(0).toUpperCase() + name.substr(1).toLowerCase() +"<br/>");
         document.getElementById("output1").innerHTML = e;
         document.getElementById("output2").innerHTML = names1;
       }
